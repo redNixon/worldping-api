@@ -8,10 +8,10 @@ import (
 	"strings"
 
 	"github.com/grafana/grafana/pkg/util"
-	"github.com/raintank/worldping-api/pkg/middleware"
-	m "github.com/raintank/worldping-api/pkg/models"
-	"github.com/raintank/worldping-api/pkg/services/sqlstore"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/middleware"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/services/sqlstore"
+	"github.com/rednixon/worldping-api/pkg/setting"
 )
 
 var (

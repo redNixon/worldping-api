@@ -1,7 +1,7 @@
 package migrations
 
 import (
-	. "github.com/raintank/worldping-api/pkg/services/sqlstore/migrator"
+	. "github.com/rednixon/worldping-api/pkg/services/sqlstore/migrator"
 )
 
 func addQuotaMigration(mg *Migrator) {

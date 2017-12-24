@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/raintank/worldping-api/pkg/events"
-	"github.com/raintank/worldping-api/pkg/log"
-	m "github.com/raintank/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/events"
+	"github.com/rednixon/worldping-api/pkg/log"
+	m "github.com/rednixon/worldping-api/pkg/models"
 )
 
 type endpointRow struct {

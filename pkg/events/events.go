@@ -6,8 +6,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/raintank/worldping-api/pkg/log"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/setting"
 )
 
 var hostname string

@@ -7,7 +7,7 @@ import (
 	"github.com/go-xorm/xorm"
 	_ "github.com/lib/pq"
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/raintank/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/log"
 )
 
 type Migrator struct {

@@ -6,9 +6,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/raintank/worldping-api/pkg/api/rbody"
-	m "github.com/raintank/worldping-api/pkg/models"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/api/rbody"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/setting"
 	. "github.com/smartystreets/goconvey/convey"
 	"gopkg.in/macaron.v1"
 )

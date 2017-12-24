@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/raintank/worldping-api/pkg/log"
-	"github.com/raintank/worldping-api/pkg/middleware"
-	m "github.com/raintank/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/middleware"
+	m "github.com/rednixon/worldping-api/pkg/models"
 	"gopkg.in/macaron.v1"
 )
 

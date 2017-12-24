@@ -12,9 +12,9 @@ import (
 	"bosun.org/graphite"
 	"github.com/hashicorp/golang-lru"
 	"github.com/raintank/met/helper"
-	"github.com/raintank/worldping-api/pkg/alerting/jobqueue"
-	m "github.com/raintank/worldping-api/pkg/models"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/alerting/jobqueue"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/setting"
 	. "github.com/smartystreets/goconvey/convey"
 	"gopkg.in/raintank/schema.v1"
 )

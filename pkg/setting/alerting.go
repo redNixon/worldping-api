@@ -3,7 +3,7 @@ package setting
 import (
 	"net/url"
 
-	"github.com/raintank/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/log"
 )
 
 type AlertingSettings struct {

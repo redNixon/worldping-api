@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/raintank/worldping-api/pkg/log"
-	"github.com/raintank/worldping-api/pkg/middleware"
-	m "github.com/raintank/worldping-api/pkg/models"
-	"github.com/raintank/worldping-api/pkg/services/sqlstore"
+	"github.com/rednixon/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/middleware"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/services/sqlstore"
 )
 
 func V1GetMonitors(c *middleware.Context, query m.GetMonitorsQuery) {

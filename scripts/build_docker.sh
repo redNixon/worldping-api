@@ -12,5 +12,5 @@ cp ../build/worldping-api build/
 cp -a ../public build/
 cp -a ../conf build/
 
-docker build -t raintank/worldping-api:$VERSION .
-docker tag raintank/worldping-api:$VERSION raintank/worldping-api:latest
+docker build -t rednixon/worldping-api:$VERSION .
+docker tag rednixon/worldping-api:$VERSION rednixon/worldping-api:latest

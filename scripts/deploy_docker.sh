@@ -7,5 +7,5 @@ cd ${DIR}
 
 VERSION=`git describe --always --long`
 
-docker push raintank/worldping-api:$VERSION
-docker push raintank/worldping-api:latest
+docker push rednixon/worldping-api:$VERSION
+docker push rednixon/worldping-api:latest

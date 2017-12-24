@@ -1,11 +1,11 @@
 package api
 
 import (
-	"github.com/raintank/worldping-api/pkg/api/rbody"
-	"github.com/raintank/worldping-api/pkg/middleware"
-	m "github.com/raintank/worldping-api/pkg/models"
-	"github.com/raintank/worldping-api/pkg/services/endpointdiscovery"
-	"github.com/raintank/worldping-api/pkg/services/sqlstore"
+	"github.com/rednixon/worldping-api/pkg/api/rbody"
+	"github.com/rednixon/worldping-api/pkg/middleware"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/services/endpointdiscovery"
+	"github.com/rednixon/worldping-api/pkg/services/sqlstore"
 )
 
 func GetEndpoints(c *middleware.Context, query m.GetEndpointsQuery) *rbody.ApiResponse {

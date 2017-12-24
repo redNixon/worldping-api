@@ -1,6 +1,6 @@
 package migrations
 
-import . "github.com/raintank/worldping-api/pkg/services/sqlstore/migrator"
+import . "github.com/rednixon/worldping-api/pkg/services/sqlstore/migrator"
 
 // --- Migration Guide line ---
 // 1. Never change a migration that is committed and pushed to master

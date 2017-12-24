@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"github.com/go-xorm/xorm"
-	"github.com/raintank/worldping-api/pkg/log"
-	m "github.com/raintank/worldping-api/pkg/models"
-	. "github.com/raintank/worldping-api/pkg/services/sqlstore/migrator"
+	"github.com/rednixon/worldping-api/pkg/log"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	. "github.com/rednixon/worldping-api/pkg/services/sqlstore/migrator"
 )
 
 func addCheckMigration(mg *Migrator) {

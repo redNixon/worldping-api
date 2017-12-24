@@ -28,11 +28,11 @@ env LOG_DIR=/var/log/worldping-api
 env DATA_DIR=/var/lib/worldping-api
 env MAX_OPEN_FILES=10000
 env CONF_DIR=/etc/raintank
-env CONF_FILE=/etc/raintank/worldping-api.ini
+env CONF_FILE=/etc/rednixon/worldping-api.ini
 env RESTART_ON_UPGRADE=false
 setuid grafana
 setgid grafana
 console log # log stdout/stderr to /var/log/upstart/
 
 
-exec /usr/sbin/worldping-api "--config=/etc/raintank/worldping-api.ini" "cfg:default.paths.data=/var/lib/worldping-api" "cfg:default.paths.logs=/var/log/worldping-api"
+exec /usr/sbin/worldping-api "--config=/etc/rednixon/worldping-api.ini" "cfg:default.paths.data=/var/lib/worldping-api" "cfg:default.paths.logs=/var/log/worldping-api"

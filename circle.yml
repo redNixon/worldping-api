@@ -3,7 +3,7 @@ machine:
     - docker
   environment:
     GOPATH: "/home/ubuntu/.go_workspace"
-    IMPORTPATH: "/home/ubuntu/.go_workspace/src/github.com/raintank/worldping-api"
+    IMPORTPATH: "/home/ubuntu/.go_workspace/src/github.com/rednixon/worldping-api"
     GODIST: "go1.8.1.linux-amd64.tar.gz"
   post:
     - mkdir -p download

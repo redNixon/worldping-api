@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	m "github.com/raintank/worldping-api/pkg/models"
+	m "github.com/rednixon/worldping-api/pkg/models"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/raintank/worldping-api/pkg/log"
-	"github.com/raintank/worldping-api/pkg/services/sqlstore"
+	"github.com/rednixon/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/services/sqlstore"
 )
 
 func LoadOrSetOffset() int {

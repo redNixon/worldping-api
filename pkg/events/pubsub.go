@@ -5,8 +5,8 @@ import (
 	"sync"
 
 	"github.com/Shopify/sarama"
-	"github.com/raintank/worldping-api/pkg/log"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/setting"
 )
 
 // message is the application type for a message.  This can contain identity,

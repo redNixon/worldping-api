@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	m "github.com/raintank/worldping-api/pkg/models"
+	m "github.com/rednixon/worldping-api/pkg/models"
 )
 
 type ProbeCreated struct {

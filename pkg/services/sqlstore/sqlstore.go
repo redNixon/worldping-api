@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/raintank/worldping-api/pkg/log"
-	"github.com/raintank/worldping-api/pkg/services/sqlstore/migrations"
-	"github.com/raintank/worldping-api/pkg/services/sqlstore/migrator"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/services/sqlstore/migrations"
+	"github.com/rednixon/worldping-api/pkg/services/sqlstore/migrator"
+	"github.com/rednixon/worldping-api/pkg/setting"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/go-xorm/xorm"

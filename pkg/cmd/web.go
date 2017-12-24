@@ -14,9 +14,9 @@ import (
 	"github.com/go-macaron/toolbox"
 	"gopkg.in/macaron.v1"
 
-	"github.com/raintank/worldping-api/pkg/api"
-	"github.com/raintank/worldping-api/pkg/log"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/api"
+	"github.com/rednixon/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/setting"
 )
 
 func newMacaron() *macaron.Macaron {

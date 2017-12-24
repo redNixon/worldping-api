@@ -3,10 +3,10 @@ package middleware
 import (
 	"fmt"
 
-	"github.com/raintank/worldping-api/pkg/log"
-	m "github.com/raintank/worldping-api/pkg/models"
-	"github.com/raintank/worldping-api/pkg/services/sqlstore"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/log"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/services/sqlstore"
+	"github.com/rednixon/worldping-api/pkg/setting"
 	"gopkg.in/macaron.v1"
 )
 

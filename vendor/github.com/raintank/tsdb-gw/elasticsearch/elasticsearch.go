@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"github.com/raintank/tsdb-gw/util"
-	"github.com/raintank/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/log"
 	"gopkg.in/macaron.v1"
 )
 

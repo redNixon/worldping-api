@@ -5,7 +5,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 cd ${DIR}
 
 : ${GOPATH:="${HOME}/.go_workspace"}
-: ${ORG_PATH:="github.com/raintank"}
+: ${ORG_PATH:="github.com/rednixon"}
 : ${REPO_PATH:="${ORG_PATH}/worldping-api"}
 
 if [ ! -z ${CIRCLECI} ] ; then

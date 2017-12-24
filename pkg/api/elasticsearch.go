@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/raintank/tsdb-gw/elasticsearch"
-	"github.com/raintank/worldping-api/pkg/middleware"
+	"github.com/rednixon/worldping-api/pkg/middleware"
 )
 
 func V1ElasticsearchProxy(c *middleware.Context) {

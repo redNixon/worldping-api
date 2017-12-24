@@ -4,10 +4,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/raintank/worldping-api/pkg/log"
-	m "github.com/raintank/worldping-api/pkg/models"
-	"github.com/raintank/worldping-api/pkg/services/notifications"
-	"github.com/raintank/worldping-api/pkg/services/sqlstore"
+	"github.com/rednixon/worldping-api/pkg/log"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/services/notifications"
+	"github.com/rednixon/worldping-api/pkg/services/sqlstore"
 )
 
 var (

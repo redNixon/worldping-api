@@ -1,10 +1,10 @@
 package api
 
 import (
-	"github.com/raintank/worldping-api/pkg/api/rbody"
-	"github.com/raintank/worldping-api/pkg/middleware"
-	m "github.com/raintank/worldping-api/pkg/models"
-	"github.com/raintank/worldping-api/pkg/services/sqlstore"
+	"github.com/rednixon/worldping-api/pkg/api/rbody"
+	"github.com/rednixon/worldping-api/pkg/middleware"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/services/sqlstore"
 )
 
 func GetProbes(c *middleware.Context, query m.GetProbesQuery) *rbody.ApiResponse {

@@ -2,7 +2,7 @@ package models
 
 import (
 	"errors"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/setting"
 	"time"
 )
 

@@ -6,10 +6,10 @@ import (
 
 	"github.com/hashicorp/golang-lru"
 	"github.com/raintank/met"
-	"github.com/raintank/worldping-api/pkg/alerting/jobqueue"
-	"github.com/raintank/worldping-api/pkg/log"
-	"github.com/raintank/worldping-api/pkg/services"
-	"github.com/raintank/worldping-api/pkg/setting"
+	"github.com/rednixon/worldping-api/pkg/alerting/jobqueue"
+	"github.com/rednixon/worldping-api/pkg/log"
+	"github.com/rednixon/worldping-api/pkg/services"
+	"github.com/rednixon/worldping-api/pkg/setting"
 )
 
 var jobQueueInternalItems met.Gauge

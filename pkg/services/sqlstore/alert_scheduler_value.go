@@ -1,7 +1,7 @@
 package sqlstore
 
 import (
-	m "github.com/raintank/worldping-api/pkg/models"
+	m "github.com/rednixon/worldping-api/pkg/models"
 )
 
 func GetAlertSchedulerValue(id string) (string, error) {

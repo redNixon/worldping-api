@@ -1,8 +1,8 @@
 package jobqueue
 
 import (
-	m "github.com/raintank/worldping-api/pkg/models"
-	"github.com/raintank/worldping-api/pkg/setting"
+	m "github.com/rednixon/worldping-api/pkg/models"
+	"github.com/rednixon/worldping-api/pkg/setting"
 )
 
 type JobQueue struct {

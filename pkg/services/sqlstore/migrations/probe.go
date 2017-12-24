@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/go-xorm/xorm"
-	. "github.com/raintank/worldping-api/pkg/services/sqlstore/migrator"
+	. "github.com/rednixon/worldping-api/pkg/services/sqlstore/migrator"
 )
 
 func addCollectorMigration(mg *Migrator) {
