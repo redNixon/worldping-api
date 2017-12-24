@@ -25,4 +25,5 @@ build/
 
 worldping-api
 .notouch
-
+gogo.sh
+Gemfile.lock
