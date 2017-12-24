@@ -29,6 +29,7 @@ var buildstamp string
 
 var configFile = flag.String("config", "", "path to config file")
 var homePath = flag.String("homepath", "", "path to grafana install/home path, defaults to working directory")
+var configPath = flag.String("configpath", "", "path to worldping's config path, defaults to working directory")
 var exitChan = make(chan int)
 
 func main() {
@@ -84,6 +85,7 @@ func initRuntime() {
 	err := setting.NewConfigContext(&setting.CommandLineArgs{
 		Config:   *configFile,
 		HomePath: *homePath,
+		ConfigPath: *configPath,
 		Args:     flag.Args(),
 	})
 

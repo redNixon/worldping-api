@@ -48,6 +48,7 @@ var (
 	// Paths
 	LogsPath string
 	HomePath string
+	ConfigPath string
 	DataPath string
 
 	// Log settings.
@@ -100,6 +101,7 @@ var (
 type CommandLineArgs struct {
 	Config   string
 	HomePath string
+	ConfigPath string
 	Args     []string
 }
 
@@ -218,17 +220,16 @@ func evalConfigValues() {
 
 func loadSpecifedConfigFile(configFile string) {
 	if configFile == "" {
-		configFile = filepath.Join(HomePath, "conf/custom.ini")
+		configFile = filepath.Join(ConfigPath, "custom.ini")
 		// return without error if custom file does not exist
 		if !pathExists(configFile) {
 			return
 		}
-	}
-
+    }
 	userConfig, err := ini.Load(configFile)
 	userConfig.BlockMode = false
 	if err != nil {
-		log.Fatal(3, "Failed to parse %v, %v", configFile, err)
+		log.Fatal(3, "Failed to parse %v, %v", ConfigPath, err)
 	}
 
 	for _, section := range userConfig.Sections() {
@@ -258,7 +259,7 @@ func loadConfiguration(args *CommandLineArgs) {
 	var err error
 
 	// load config defaults
-	defaultConfigFile := path.Join(HomePath, "conf/defaults.ini")
+	defaultConfigFile := path.Join(ConfigPath, "defaults.ini")
 	configFiles = append(configFiles, defaultConfigFile)
 
 	Cfg, err = ini.Load(defaultConfigFile)
@@ -274,7 +275,7 @@ func loadConfiguration(args *CommandLineArgs) {
 	applyCommandLineDefaultProperties(commandLineProps)
 
 	// init logging before specific config so we can log errors from here on
-	DataPath = makeAbsolute(Cfg.Section("paths").Key("data").String(), HomePath)
+	DataPath = makeAbsolute(Cfg.Section("paths").Key("data").String(), ConfigPath)
 	initLogging(args)
 
 	// load specified config file
@@ -293,6 +294,13 @@ func loadConfiguration(args *CommandLineArgs) {
 	DataPath = makeAbsolute(Cfg.Section("paths").Key("data").String(), HomePath)
 	initLogging(args)
 }
+func configPathExists(path string) bool {
+    log.Info("Inspecting ConfigPath: %v", path)
+    if pathExists(filepath.Join(path, "defaults.ini")) {
+        return true
+    }
+    return false
+}
 
 func pathExists(path string) bool {
 	_, err := os.Stat(path)
@@ -305,26 +313,34 @@ func pathExists(path string) bool {
 	return false
 }
 
+func getConfigPath(args *CommandLineArgs) string {
+    var c_path string
+    c_path, _ = filepath.Abs(".")
+	if args.ConfigPath != "" && configPathExists(args.ConfigPath) {
+        return  args.ConfigPath
+    } else if configPathExists("/etc/defaults/worldping-api") {
+        return "/etc/defaults/worldping-api"
+    } else if configPathExists("/etc/worldping-api/conf") {
+        return "/etc/worldping-api/conf"
+    } else if configPathExists(filepath.Join(c_path, "../")) {
+		return filepath.Join(c_path, "../")
+    } else if configPathExists(c_path) {
+        return c_path
+    } else {
+        log.Fatal(3, "Failed to find a usable ConfigPath directory")
+    }
+    return ""
+}
+
 func setHomePath(args *CommandLineArgs) {
 	if args.HomePath != "" {
 		HomePath = args.HomePath
 		return
 	}
-
-	HomePath, _ = filepath.Abs(".")
-	// check if homepath is correct
-	if pathExists(filepath.Join(HomePath, "conf/defaults.ini")) {
-		return
-	}
-
-	// try down one path
-	if pathExists(filepath.Join(HomePath, "../conf/defaults.ini")) {
-		HomePath = filepath.Join(HomePath, "../")
-	}
 }
 
 func NewConfigContext(args *CommandLineArgs) error {
-	setHomePath(args)
+    ConfigPath = getConfigPath(args)
 	loadConfiguration(args)
 
 	Env = Cfg.Section("").Key("app_mode").MustString("development")
@@ -488,6 +504,7 @@ func LogConfigurationInfo() {
 
 	text.WriteString("Paths:\n")
 	text.WriteString(fmt.Sprintf("  home: %s\n", HomePath))
+	text.WriteString(fmt.Sprintf("  config: %s\n", ConfigPath))
 	text.WriteString(fmt.Sprintf("  data: %s\n", DataPath))
 	text.WriteString(fmt.Sprintf("  logs: %s\n", LogsPath))
 

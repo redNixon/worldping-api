@@ -289,9 +289,6 @@ func (l *Logger) Debug(format string, v ...interface{}) {
 }
 
 func (l *Logger) Info(format string, v ...interface{}) {
-	if l.level > INFO {
-		return
-	}
 	msg := fmt.Sprintf("[I] "+format, v...)
 	l.writerMsg(0, INFO, msg)
 }
