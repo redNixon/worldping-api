@@ -38,6 +38,7 @@ var (
 	Env        string = DEV
 	InstanceId string
 	AppUrl     string
+	DefaultCFGProbes []string
 	AppSubUrl  string
 
 	// build
@@ -109,6 +110,10 @@ func init() {
 	log.NewLogger(0, "console", `{"level": 0, "formatting":true}`)
 }
 
+func parseProbes(section *ini.Section) []string {
+    vals := section.Key("defaults").Strings(",")
+    return vals
+}
 func parseAppUrlAndSubUrl(section *ini.Section) (string, string) {
 	appUrl := section.Key("root_url").MustString("http://localhost:3000/")
 	if appUrl[len(appUrl)-1] != '/' {
@@ -348,6 +353,8 @@ func NewConfigContext(args *CommandLineArgs) error {
 
 	server := Cfg.Section("server")
 	AppUrl, AppSubUrl = parseAppUrlAndSubUrl(server)
+	probeCFG := Cfg.Section("probes")
+	DefaultCFGProbes = parseProbes(probeCFG)
 
 	Protocol = HTTP
 	if server.Key("protocol").MustString("http") == "https" {

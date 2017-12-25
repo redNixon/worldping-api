@@ -43,7 +43,6 @@ func main() {
 
 	flag.Parse()
 	initRuntime()
-
 	if setting.ProfileHeapMB > 0 {
 		errors := make(chan error)
 		go func() {
@@ -73,7 +72,7 @@ func main() {
 		log.Fatal(3, "Notification service failed to initialize", err)
 	}
 
-	if err := endpointdiscovery.InitEndpointDiscovery(); err != nil {
+	if err := endpointdiscovery.InitEndpointDiscovery(setting.DefaultCFGProbes); err != nil {
 		log.Fatal(3, "EndpointDiscovery service failed to initialize.", err)
 	}
 

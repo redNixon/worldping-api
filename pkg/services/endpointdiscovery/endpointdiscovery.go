@@ -18,8 +18,8 @@ import (
 
 var defaultProbes []int64
 
-func InitEndpointDiscovery() error {
-	for _, name := range []string{"New York", "Silicon Valley", "Chicago", "South Carolina", "Los Angeles", "Amsterdam", "London", "Tokyo"} {
+func InitEndpointDiscovery(defaultCFGProbes []string) error {
+	for _, name := range defaultCFGProbes {
 		probe, err := sqlstore.GetProbeByName(name, 1)
 		if err != nil {
 			if err == m.ErrProbeNotFound {
