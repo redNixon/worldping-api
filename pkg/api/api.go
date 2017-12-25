@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/go-macaron/binding"
-	"github.com/raintank/raintank-apps/pkg/auth"
+	"github.com/rednixon/raintank-apps/pkg/auth"
 	"github.com/raintank/tsdb-gw/elasticsearch"
 	"github.com/rednixon/worldping-api/pkg/api/rbody"
 	"github.com/rednixon/worldping-api/pkg/log"

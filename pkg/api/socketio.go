@@ -13,7 +13,7 @@ import (
 	"github.com/googollee/go-socket.io"
 	"github.com/hashicorp/go-version"
 	"github.com/raintank/met"
-	"github.com/raintank/raintank-apps/pkg/auth"
+	"github.com/rednixon/raintank-apps/pkg/auth"
 	"github.com/rednixon/worldping-api/pkg/events"
 	"github.com/rednixon/worldping-api/pkg/log"
 	"github.com/rednixon/worldping-api/pkg/middleware"

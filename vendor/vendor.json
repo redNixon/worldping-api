@@ -346,7 +346,7 @@
 		},
 		{
 			"checksumSHA1": "YP5MOKpfFQiS6F12th9I8hlI5EE=",
-			"path": "github.com/raintank/raintank-apps/pkg/auth",
+			"path": "github.com/rednixon/raintank-apps/pkg/auth",
 			"revision": "6bf25870e4795026c75afb6714849f74a0db7007",
 			"revisionTime": "2017-05-23T17:28:40Z"
 		},

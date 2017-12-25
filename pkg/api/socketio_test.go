@@ -11,7 +11,7 @@ import (
 	"github.com/graarh/golang-socketio"
 	"github.com/graarh/golang-socketio/transport"
 	"github.com/raintank/met/helper"
-	"github.com/raintank/raintank-apps/pkg/auth"
+	"github.com/rednixon/raintank-apps/pkg/auth"
 	"github.com/rednixon/worldping-api/pkg/events"
 	m "github.com/rednixon/worldping-api/pkg/models"
 	"github.com/rednixon/worldping-api/pkg/services/sqlstore"

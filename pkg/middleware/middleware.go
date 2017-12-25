@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/raintank/raintank-apps/pkg/auth"
+	"github.com/rednixon/raintank-apps/pkg/auth"
 	"gopkg.in/macaron.v1"
 )
 
